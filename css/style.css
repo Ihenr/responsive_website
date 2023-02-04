@@ -264,3 +264,82 @@ h1, h2, h3{
 .campo textarea:focus {
     outline-color: #21b92e;
 }
+
+/* implementacion de las cards */
+.container-card{
+    padding: 3rem 0;
+    display: flex;
+    /* height: 20px; */
+    width: 100%;
+    grid-auto-flow: column;
+    overflow-x: auto;
+    gap: 15px;
+    border: 1px solid white;
+    
+}
+.container-card::-webkit-scrollbar{
+    display: none;
+    
+}
+.contenido{
+    display: flex;
+    width: 350px;
+    gap: 20px;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 25px;
+    /* column-gap: 20px; */
+    
+}
+.card{
+    flex: 0 0 100%;
+    padding: 30px;
+    scroll-snap-align: start;
+    border-radius: 30px;
+}
+.contenido .card p {
+    color: #ebebed;
+    text-align: center;
+}
+.contenido .card h1 {
+    text-align: left;
+    text-transform: uppercase;
+    color: #ebebed;
+}
+.card h1:hover{
+    padding-left: 30px;
+    color: #212123;
+    cursor: pointer;
+    scale: 1.5;
+}
+
+.card:nth-child(1) {
+    background: linear-gradient(-229deg, #00DBDE, #FC00FF);
+}
+
+.card:nth-child(2) {
+    background: linear-gradient(-229deg, #0093E9, #80D0C7);
+}
+
+.card:nth-child(3) {
+    background: linear-gradient(-229deg, #50d990, #d4d054);
+}
+
+.card:nth-child(4) {
+    background: linear-gradient(-229deg, #D9AFD9, #97D9E1);
+}
+
+.card:nth-child(5) {
+    background: linear-gradient(-229deg, #FBAB7E, #F7CE68);
+}
+
+
+@media (max-width: 769px ) {
+    .contenido{
+        width: 315px;
+    }
+}
+@media (max-width: 450px ) {
+    .contenido{
+        width: 275px;
+    }
+}
