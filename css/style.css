@@ -11,7 +11,7 @@
 html{
     font-size: 62.5%;
     box-sizing: border-box;
-    scroll-snap-type: x mandatory;
+    /* scroll-snap-type: x mandatory; */
 }
 *, *:before, *:after {
     box-sizing: inherit;
@@ -148,13 +148,13 @@ h1, h2, h3{
     align-items: flex-end;
 }
 /* scroll Snap */
-.servicios,
+/* .servicios,
 .mavegacion-principal,
 .formulario{
     scroll-snap-align: center;
     scroll-snap-stop: always;
 
-}
+} */
 
 /* servicios */
 .servicios{
@@ -245,14 +245,22 @@ h1, h2, h3{
 }
 .campo textarea{
     height: 20rem;
+    resize: none;
+    /* outline: none; */
 }
 .input-text{
     width: 100%;
     border: none;
     padding: 1.5rem;
     border-radius: .5rem;
+    /* outline: none; */
 }
 .footer{
     text-align: center;
     padding: 2rem;
+    
+}
+.input-text:focus,
+.campo textarea:focus {
+    outline-color: #21b92e;
 }
