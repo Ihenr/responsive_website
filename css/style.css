@@ -2,10 +2,11 @@
 :root{
     --blanco: #ffffff;
     --oscuro: #212121; 
-    --primario: #ffc107;
+    --primario: #3389e4;
     --secundario: #0097a7;
     --gris:#757575;
     --grisClaro:#dfe9f3;
+    --ubicacion: #555;
 }
 /* Globales */
 html{
@@ -84,6 +85,7 @@ h1, h2, h3{
     }
     
 }
+
 .boton:hover{
     cursor: pointer;
 }
@@ -213,6 +215,7 @@ h1, h2, h3{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0,0.2);
 }
 /* Contacto */
 .formulario{
@@ -329,6 +332,9 @@ body::-webkit-scrollbar-thumb:hover {
     padding: 30px;
     scroll-snap-align: start;
     border-radius: 30px;
+    /* box-shadow: 0px 5px 15px rgba(0, 0, 0,0.25); */
+    box-shadow: rgba(50, 50, 93, .25) 0 6px 12px -2px,
+                rgba(0, 0, 0, .3) 0 3px 7px -3px;
 }
 .contenido .card p {
     color: #ebebed;
@@ -339,12 +345,13 @@ body::-webkit-scrollbar-thumb:hover {
     text-transform: uppercase;
     color: #ebebed;
 }
-.card h1:hover{
+
+/* .card h1:hover{
     padding-left: 30px;
     color: #212123;
     cursor: pointer;
     scale: 1.5;
-}
+} */
 
 .card:nth-child(1) {
     background: linear-gradient(-229deg, #00DBDE, #FC00FF);
@@ -376,4 +383,50 @@ body::-webkit-scrollbar-thumb:hover {
     .contenido{
         width: 310px;
     }
+}
+.boton-flotante {
+    position: fixed;
+    background: #27b327;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 70px;
+    height: 70px;
+    margin: 15px;
+    border-radius: 50px;
+    color: var(--blanco);
+    text-align: center;
+    font-size: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: heartbeat 1.5s ease-in-out infinite both;
+}
+.boton-flotante a {
+    color: var(--blanco);
+    text-decoration: none;
+}
+@keyframes heartbeat {
+    from {
+        transform: scale(1);
+        transform-origin: center center;
+        animation-timing-function: ease-out;
+    }
+    10% {
+        transform: scale(0.91);
+        animation-timing-function: ease-in;
+    }
+    17% {
+        transform: scale(0.98);
+        animation-timing-function: ease-out;
+    }
+    33% {
+        transform: scale(0.87);
+        animation-timing-function: ease-in;
+    }
+    17% {
+        transform: scale(1);
+        animation-timing-function: ease-out;
+    }
+    
 }
