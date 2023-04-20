@@ -8,6 +8,11 @@
     --grisClaro:#dfe9f3;
     --ubicacion: #555;
 }
+/* Agregar un tipo de letra */
+@font-face {
+    font-family: Vermin Vibes;
+    src: url(../font/vermin_vibes_slant.ttf);
+}
 /* Globales */
 html{
     font-size: 62.5%;
@@ -42,8 +47,16 @@ h1, h2, h3{
     text-align: center;
 }
 /* Titulos */
+.titulo {
+    padding: 10px;
+}
+.Vermin {
+    font-size: 2rem;
+    font-family: Vermin Vibes;
+}
 .titulo span{
     font-size: 2rem;
+    font-family: 'Krub', sans-serif;
 }
 .contenedor{
     max-width: 120rem;
@@ -83,7 +96,12 @@ h1, h2, h3{
         width: 80%;
         margin-top: 1rem;
     }
-    
+}
+@media (max-width: 410px) {
+    .Vermin {
+        font-size: 1.5rem;
+        font-family: Vermin Vibes;
+    }
 }
 
 .boton:hover{
@@ -120,7 +138,6 @@ h1, h2, h3{
     .mavegacion-principal{
         flex-direction: column;
     }
-    
 }
 .mavegacion-principal a {
     display: block;
