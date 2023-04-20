@@ -54,10 +54,13 @@ h1, h2, h3{
     font-size: 2rem;
     font-family: Vermin Vibes;
 }
-.titulo span{
+.titulo.Vermin span{
     font-size: 1rem;
     font-family: Vermin Vibes;
     color: var(--gris);
+}
+.titulo span{
+    font-size: 2rem;
 }
 .contenedor{
     max-width: 120rem;
